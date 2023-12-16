@@ -266,6 +266,7 @@ plot_average_price <- category %>%
 # Display the plots
 print(plot_average_sales)
 print(plot_average_price)
+
 ```
 
 ```{r, results='markup'}
