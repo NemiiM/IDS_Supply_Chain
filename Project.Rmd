@@ -288,6 +288,7 @@ ggplot(data, aes(x = `Product.Price`, y = `Sales`)) +
        x = "Product Price",
        y = "Sales per customer") +
   theme_minimal()
+
 ```
 
 #Model Building
