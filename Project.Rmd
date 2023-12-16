@@ -267,7 +267,7 @@ plot_average_price <- category %>%
   summarise(average_price = mean(`Product.Price`)) %>%
   arrange(desc(average_price)) %>%
   ggplot(aes(x = reorder(`Category.Name`, -average_price), y = average_price)) +
-  geom_bar(stat = "identity", fill = "coral") +
+  geom_bar(stat = "identity", fill = "orange") +
   labs(title = "Average Price for all Categories", x = "Category Name", y = "Average Price") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
@@ -282,8 +282,8 @@ print(plot_average_price)
 
 # Scatter plot for Product Price vs. Sales per customer
 ggplot(data, aes(x = `Product.Price`, y = `Sales`)) +
-  geom_point(shape = 1, size = 2, color = "blue", fill = "blue") +
-  geom_smooth(method = "lm", se = FALSE, linetype = "dotted", color = "blue") +
+  geom_point(shape = 1, size = 2, color = "blue", fill = "pink") +
+  geom_smooth(method = "lm", se = FALSE, linetype = "dotted", color = "green") +
   labs(title = "Product Price vs Sales per customer",
        x = "Product Price",
        y = "Sales per customer") +
